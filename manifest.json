@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "My Tapsi",
+  "short_name": "My Tapsi",
+  "version": "3.0.0",
+  "description": "Analyze your Tapsi rides",
+  "permissions": ["tabs", "storage"],
+  "browser_action": {
+    "default_popup": "popup/index.html",
+    "default_title": "My Tpasi"
+  },
+  "icons": {
+    "128": "assets/icon.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["contentscript.js"],
+      "matches": ["https://app.tapsi.cab/*"]
+    }
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "web_accessible_resources": ["assets/*"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
