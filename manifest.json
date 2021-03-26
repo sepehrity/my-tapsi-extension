@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "My Tapsi",
   "short_name": "My Tapsi",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Analyze your Tapsi rides",
   "permissions": ["tabs", "storage"],
   "browser_action": {
